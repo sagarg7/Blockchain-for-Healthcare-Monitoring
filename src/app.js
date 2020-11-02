@@ -1,5 +1,6 @@
 App = {
         loading: false,
+        contracts: {},
         load: async () => {
             await App.loadWeb3()
             await App.loadAccount()
@@ -81,14 +82,25 @@ App = {
                 const hid = patient[10]
                 const hospital = await App.hospitals.hospitals(hid)
                 const hos_name = hospital[1]
+                // console.log(patient);
 
-                var table_row = '<tr><td>'+pid.toSting()+'</td><td>'+fname+'</td><td>'+lname+'</td><td>'+heartbeat.toString()+'</td><td>'+CO.toString()+'</td><td>'+CO2.toString()+'</td><td>'+body_temp_w.toString()+'.'+body_temo_d.toString()+'</td><td>'+room_temp_w.toString()+'.'+room_temp_d.toString()+'</td><td>'+hos_name+'</td></tr>'
-                $('#patientTable').append(table_row)
+                var table_row = '<tr><td>'+pid.toString()+'</td><td>'+fname+'</td><td>'+lname+'</td><td>'+heartbeat.toString()+'</td><td>'+CO.toString()+'</td><td>'+CO2.toString()+'</td><td>'+body_temp_w.toString()+'.'+body_temo_d.toString()+'</td><td>'+room_temp_w.toString()+'.'+room_temp_d.toString()+'</td><td>'+hos_name+'</td></tr>';
+                console.log(table_row);
+                $('table').find('tbody').append(table_row);
             }
         },
 
         setLoading: (boolean) => {
-            App.loading = boolean
+          App.loading = boolean
+          const loader = $('#loader')
+          const content = $('#content')
+          if (boolean) {
+            loader.show()
+            content.hide()
+          } else {
+            loader.hide()
+            content.show()
+          }
         }
 }
 
