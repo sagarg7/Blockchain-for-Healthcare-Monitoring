@@ -18,6 +18,5 @@ contract Hospital {
         hospitalCount ++;
         hospitals[hospitalCount] = Hospital(hospitalCount,_name);
     }
-
-
+    
 }
