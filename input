@@ -1,0 +1,5 @@
+Heartbeat sensor- int
+Body temp - float 
+Room temp - float
+CO sensor - int
+CO2 sensor - int
