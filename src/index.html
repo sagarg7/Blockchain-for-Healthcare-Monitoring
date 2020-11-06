@@ -41,59 +41,51 @@
       }
     </style>
   </head>
-  <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a>Healthcare Management System</a>
+  <body >
+    <div style="vertical-align: middle;">
+      <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="nav-link" href="#"><span>Healthcare Management System</span></a>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
           <small><a class="nav-link" href="#"><span id="account"></span></a></small>
         </li>
       </ul>
     </nav>
+    <center><br><br><br><br>
+      <div>
+        <h1>
+          Patient Details
+        </h1>  
+      </div>
+    </center>
     <div class="container-fluid">
       <div class="row">
         <main role="main" class="col-lg-12 d-flex justify-content-center">
           <div id="loader" class="text-center">
             <p class="text-center">Loading...</p><br>
           </div>
-          <div>
-            <table id="PatientTable" class="table">
-              <th>
-                <td>PatientID</td>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Heartbeat Rate(per min)</td>
-                <td>CO Level</td>
-                <td>CO2 Level</td>
-                <td>Body Temp</td>
-                <td>Room Temp</td>
-                <td>Hospital</td>
-              </th>
+          <div id="content">
+            <table class="table">
+              <tr  class="thead-dark">
+                <th>PatientID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Heartbeat Rate(per min)</th>
+                <th>CO Level</th>
+                <th>CO2 Level</th>
+                <th>Body Temp</th>
+                <th>Room Temp</th>
+                <th>Hospital</th>
+                <th>Diagnosis</th>
+              </tr>
               <tbody></tbody>
             </table>
+            <center><a href="add_diagnosis.html" class="btn btn-primary mb-2">Add diagnosis</a></center>
           </div>
-
-
-
-          <!-- <div id="content">
-         <form onSubmit="App.createTask(); return false;">
-              <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
-              <input type="submit" hidden="">
-            </form>
-            <ul id="taskList" class="list-unstyled">
-              <div class="taskTemplate" class="checkbox" style="display: none">
-                <label>
-                  <input type="checkbox" />
-                  <span class="content">Task content goes here...</span>
-                </label>
-              </div>
-            </ul>
-            <ul id="completedTaskList" class="list-unstyled">
-            </ul>
-          </div> -->
         </main>
-      </div>
+      </div>  
     </div>
+  </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -103,3 +95,6 @@
     <script src="app.js"></script>
   </body>
 </html>
+<!-- <form class="form-inline" onSubmit="App.addDiagnosis(); return false;">\
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Diagnosis">\
+<button type="submit" class="btn btn-primary mb-2">Add</button></form> -->

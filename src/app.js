@@ -1,6 +1,15 @@
 App = {
         loading: false,
         contracts: {},
+        addDiagnosis: async () =>{
+          const pid = document.getElementById("pid").value;
+          const diagnosis = document.getElementById("diagnosis").value;
+
+          var patient = await App.patients.patients(pid);
+          App.patients.addDiagnosis(pid,diagnosis);
+          console.log("Diagnosis added");
+        },
+
         load: async () => {
             await App.loadWeb3()
             await App.loadAccount()
@@ -48,6 +57,37 @@ App = {
             App.hospitals = await App.contracts.Hospital.deployed()
             App.patients = await App.contracts.Patient.deployed()
         },
+        loadDiagnosisForm: async () => {
+          const patientCount = await App.patients.patientCount();
+          const values = Array.from({length: patientCount}, (_, i) => i + 1);
+
+          var select = document.getElementsByTagName("select")[0];
+          
+          if(select.length == 0){
+            for (const val of values) {
+              var option = document.createElement("option");
+              option.value = val;
+              option.text = val.toString();
+              select.appendChild(option);
+            }
+          }
+        },
+
+        loadPatientDetails: async () => {
+          const pid = document.getElementById("pid").value;
+          const patient = await App.patients.patients(pid);
+
+          document.getElementById('fname').value = patient[1];
+          document.getElementById('lname').value = patient[2];
+          document.getElementById('hbeat').value = patient[3];
+          document.getElementById('co').value = patient[4];
+          document.getElementById('co2').value = patient[5];
+          document.getElementById('btemp').value = patient[6] + "." + patient[7];
+          document.getElementById('rtemp').value = patient[8] + "." + patient[9];
+          const hid = patient[10]
+          const hospital = await App.hospitals.hospitals(hid)
+          document.getElementById('hospital').value = hospital[1];
+        },
 
         render: async () => {
             if(App.loading){
@@ -82,11 +122,18 @@ App = {
                 const hid = patient[10]
                 const hospital = await App.hospitals.hospitals(hid)
                 const hos_name = hospital[1]
+                const diagnosis = patient[11]
                 // console.log(patient);
 
-                var table_row = '<tr><td>'+pid.toString()+'</td><td>'+fname+'</td><td>'+lname+'</td><td>'+heartbeat.toString()+'</td><td>'+CO.toString()+'</td><td>'+CO2.toString()+'</td><td>'+body_temp_w.toString()+'.'+body_temo_d.toString()+'</td><td>'+room_temp_w.toString()+'.'+room_temp_d.toString()+'</td><td>'+hos_name+'</td></tr>';
-                console.log(table_row);
-                $('table').find('tbody').append(table_row);
+                var table_row = '<tr><td>'+pid.toString()+'</td><td>'+fname+'</td><td>'+lname+'</td><td>'+heartbeat.toString()+'</td><td>'+CO.toString()+'</td><td>'+CO2.toString()+'</td><td>'+body_temp_w.toString()+'.'+body_temo_d.toString()+'</td><td>'+room_temp_w.toString()+'.'+room_temp_d.toString()+'</td><td>'+hos_name+'</td><td>';
+                if(diagnosis!='') {
+                  table_row = table_row + diagnosis + '</td></tr>'
+                }
+                else {
+                  table_row = table_row + 'Undiagnosed</td></tr>'
+                }
+                // console.log(table_row);
+                $('table').append(table_row);
             }
         },
 
@@ -109,3 +156,4 @@ $(() => {
     App.load()
   })
 })
+

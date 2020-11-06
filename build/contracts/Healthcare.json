@@ -604,12 +604,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x8F210D44e787056D6Ebb08fDB375c7be8C1f26A2",
-      "transactionHash": "0x43a0ef6233054341a2d83e3f57200be25f8d941fa6a4f9515d7d941a63d35409"
+      "address": "0xDd8e3414Dd324D4808c3A8822fB852F77AFd0cFc",
+      "transactionHash": "0x4d57ffc0390e41e6fddc0cef71b3aa1c7249cd235e65acf8a5fbffbcd870736a"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2020-11-04T16:48:58.203Z",
+  "updatedAt": "2020-11-06T09:31:32.256Z",
   "devdoc": {
     "methods": {}
   },
