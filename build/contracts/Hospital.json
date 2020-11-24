@@ -13,8 +13,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x350dadb7"
+      "type": "function"
     },
     {
       "constant": true,
@@ -37,15 +36,30 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x81dc6fd2"
+      "type": "function"
     },
     {
       "inputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "constructor",
-      "signature": "constructor"
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "hospital_node_added",
+      "type": "event"
     },
     {
       "constant": false,
@@ -59,28 +73,27 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x55dc1066"
+      "type": "function"
     }
   ],
-  "bytecode": "0x60806040526000805534801561001457600080fd5b5060408051808201909152600d81527f44656d6f20486f73706974616c00000000000000000000000000000000000000602082015261005b90640100000000610060810204565b610147565b600080546001908101808355604080518082018252828152602080820187815293865284815291909420845181559151805192936100a6939085019291909101906100ac565b50505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100ed57805160ff191683800117855561011a565b8280016001018555821561011a579182015b8281111561011a5782518255916020019190600101906100ff565b5061012692915061012a565b5090565b61014491905b808211156101265760008155600101610130565b90565b61039f806101566000396000f3fe6080604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663350dadb7811461005b57806355dc10661461008257806381dc6fd214610137575b600080fd5b34801561006757600080fd5b506100706101e0565b60408051918252519081900360200190f35b34801561008e57600080fd5b50610135600480360360208110156100a557600080fd5b8101906020810181356401000000008111156100c057600080fd5b8201836020820111156100d257600080fd5b803590602001918460018302840111640100000000831117156100f457600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506101e6945050505050565b005b34801561014357600080fd5b506101616004803603602081101561015a57600080fd5b5035610232565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156101a457818101518382015260200161018c565b50505050905090810190601f1680156101d15780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60005481565b6000805460019081018083556040805180820182528281526020808201878152938652848152919094208451815591518051929361022c939085019291909101906102d8565b50505050565b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102ce5780601f106102a3576101008083540402835291602001916102ce565b820191906000526020600020905b8154815290600101906020018083116102b157829003601f168201915b5050505050905082565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031957805160ff1916838001178555610346565b82800160010185558215610346579182015b8281111561034657825182559160200191906001019061032b565b50610352929150610356565b5090565b61037091905b80821115610352576000815560010161035c565b9056fea165627a7a723058200881747aecc8c0a9f2590817baaa7069c157914cda559c7fed2289f937e2b6eb0029",
-  "deployedBytecode": "0x6080604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663350dadb7811461005b57806355dc10661461008257806381dc6fd214610137575b600080fd5b34801561006757600080fd5b506100706101e0565b60408051918252519081900360200190f35b34801561008e57600080fd5b50610135600480360360208110156100a557600080fd5b8101906020810181356401000000008111156100c057600080fd5b8201836020820111156100d257600080fd5b803590602001918460018302840111640100000000831117156100f457600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506101e6945050505050565b005b34801561014357600080fd5b506101616004803603602081101561015a57600080fd5b5035610232565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156101a457818101518382015260200161018c565b50505050905090810190601f1680156101d15780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60005481565b6000805460019081018083556040805180820182528281526020808201878152938652848152919094208451815591518051929361022c939085019291909101906102d8565b50505050565b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102ce5780601f106102a3576101008083540402835291602001916102ce565b820191906000526020600020905b8154815290600101906020018083116102b157829003601f168201915b5050505050905082565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031957805160ff1916838001178555610346565b82800160010185558215610346579182015b8281111561034657825182559160200191906001019061032b565b50610352929150610356565b5090565b61037091905b80821115610352576000815560010161035c565b9056fea165627a7a723058200881747aecc8c0a9f2590817baaa7069c157914cda559c7fed2289f937e2b6eb0029",
-  "sourceMap": "25:409:1:-;;;77:1;49:29;;201:69;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;232:31:1;;;;;;;;;;;;;;;;;;;:14;;;;:31;:::i;:::-;25:409;;276:151;338:13;:16;;;;;;;;;391:29;;;;;;;;;;;;;;;;;;364:24;;;;;;;;;;:56;;;;;;;;:24;;:56;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;276:151:1:o;25:409::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;25:409:1;;;-1:-1:-1;25:409:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "25:409:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;49:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;49:29:1;;;;;;;;;;;;;;;;;;;;276:151;;8:9:-1;5:2;;;30:1;27;20:12;5:2;276:151:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;276:151:1;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;276:151:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;276:151:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;276:151:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;276:151:1;;-1:-1:-1;276:151:1;;-1:-1:-1;;;;;276:151:1;;;152:42;;8:9:-1;5:2;;;30:1;27;20:12;5:2;152:42:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;152:42:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;152:42:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;49:29;;;;:::o;276:151::-;338:13;:16;;;;;;;;;391:29;;;;;;;;;;;;;;;;;;364:24;;;;;;;;;;:56;;;;;;;;:24;;:56;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;276:151:1:o;152:42::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;152:42:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;25:409::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;25:409:1;;;-1:-1:-1;25:409:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\n\ncontract Hospital {\n    uint public hospitalCount = 0;\n\n    struct Hospital {\n        uint id;\n        string name;\n    }\n\n    mapping(uint => Hospital) public hospitals;\n\n    constructor() public {\n        createHospital(\"Demo Hospital\");\n    }\n\n    function createHospital(string memory _name) public {\n        hospitalCount ++;\n        hospitals[hospitalCount] = Hospital(hospitalCount,_name);\n    }\n    \n}",
-  "sourcePath": "/home/winstone/DRIVES/Projects/MP2/Blockchain-for-Healthcare-Monitoring/contracts/Hospital.sol",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b5060408051808201909152600d81527f44656d6f20486f73706974616c00000000000000000000000000000000000000602082015261005b90640100000000610060810204565b6101eb565b600080546001908101808355604080518082018252828152602080820187815293865284815291909420845181559151805192936100a693908501929190910190610150565b509050507f4750190d2b69f465d694f800be813bc9cbc3f251f782bc2473413904985f40e4600054826040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156101125781810151838201526020016100fa565b50505050905090810190601f16801561013f5780820380516001836020036101000a031916815260200191505b50935050505060405180910390a150565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061019157805160ff19168380011785556101be565b828001600101855582156101be579182015b828111156101be5782518255916020019190600101906101a3565b506101ca9291506101ce565b5090565b6101e891905b808211156101ca57600081556001016101d4565b90565b610443806101fa6000396000f3fe6080604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663350dadb7811461005b57806355dc10661461008257806381dc6fd214610137575b600080fd5b34801561006757600080fd5b506100706101e0565b60408051918252519081900360200190f35b34801561008e57600080fd5b50610135600480360360208110156100a557600080fd5b8101906020810181356401000000008111156100c057600080fd5b8201836020820111156100d257600080fd5b803590602001918460018302840111640100000000831117156100f457600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506101e6945050505050565b005b34801561014357600080fd5b506101616004803603602081101561015a57600080fd5b50356102d6565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156101a457818101518382015260200161018c565b50505050905090810190601f1680156101d15780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60005481565b6000805460019081018083556040805180820182528281526020808201878152938652848152919094208451815591518051929361022c9390850192919091019061037c565b509050507f4750190d2b69f465d694f800be813bc9cbc3f251f782bc2473413904985f40e4600054826040518083815260200180602001828103825283818151815260200191508051906020019080838360005b83811015610298578181015183820152602001610280565b50505050905090810190601f1680156102c55780820380516001836020036101000a031916815260200191505b50935050505060405180910390a150565b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156103725780601f1061034757610100808354040283529160200191610372565b820191906000526020600020905b81548152906001019060200180831161035557829003601f168201915b5050505050905082565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103bd57805160ff19168380011785556103ea565b828001600101855582156103ea579182015b828111156103ea5782518255916020019190600101906103cf565b506103f69291506103fa565b5090565b61041491905b808211156103f65760008155600101610400565b9056fea165627a7a72305820a65888f77cd48aa5a94b44c2114c1d1e11cf25c4945a70ba948538de271c9dbc0029",
+  "deployedBytecode": "0x6080604052600436106100565763ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663350dadb7811461005b57806355dc10661461008257806381dc6fd214610137575b600080fd5b34801561006757600080fd5b506100706101e0565b60408051918252519081900360200190f35b34801561008e57600080fd5b50610135600480360360208110156100a557600080fd5b8101906020810181356401000000008111156100c057600080fd5b8201836020820111156100d257600080fd5b803590602001918460018302840111640100000000831117156100f457600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506101e6945050505050565b005b34801561014357600080fd5b506101616004803603602081101561015a57600080fd5b50356102d6565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156101a457818101518382015260200161018c565b50505050905090810190601f1680156101d15780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60005481565b6000805460019081018083556040805180820182528281526020808201878152938652848152919094208451815591518051929361022c9390850192919091019061037c565b509050507f4750190d2b69f465d694f800be813bc9cbc3f251f782bc2473413904985f40e4600054826040518083815260200180602001828103825283818151815260200191508051906020019080838360005b83811015610298578181015183820152602001610280565b50505050905090810190601f1680156102c55780820380516001836020036101000a031916815260200191505b50935050505060405180910390a150565b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156103725780601f1061034757610100808354040283529160200191610372565b820191906000526020600020905b81548152906001019060200180831161035557829003601f168201915b5050505050905082565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103bd57805160ff19168380011785556103ea565b828001600101855582156103ea579182015b828111156103ea5782518255916020019190600101906103cf565b506103f69291506103fa565b5090565b61041491905b808211156103f65760008155600101610400565b9056fea165627a7a72305820a65888f77cd48aa5a94b44c2114c1d1e11cf25c4945a70ba948538de271c9dbc0029",
+  "sourceMap": "27:563:0:-;;;80:1;52:29;;290:71;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;322:31:0;;;;;;;;;;;;;;;;;;;:14;;;;:31;:::i;:::-;27:563;;369:212;432:13;:16;;;;;;;;;486:29;;;;;;;;;;;;;;;;;;459:24;;;;;;;;;;:56;;;;;;;;:24;;:56;;;;;;;;;;;;:::i;:::-;;;;;531:40;551:13;;565:5;531:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;531:40:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;369:212;:::o;27:563::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;27:563:0;;;-1:-1:-1;27:563:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "27:563:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;52:29;;8:9:-1;5:2;;;30:1;27;20:12;5:2;52:29:0;;;;;;;;;;;;;;;;;;;;369:212;;8:9:-1;5:2;;;30:1;27;20:12;5:2;369:212:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;369:212:0;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;369:212:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;369:212:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;369:212:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;369:212:0;;-1:-1:-1;369:212:0;;-1:-1:-1;;;;;369:212:0;;;239:42;;8:9:-1;5:2;;;30:1;27;20:12;5:2;239:42:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;239:42:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;239:42:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;52:29;;;;:::o;369:212::-;432:13;:16;;;;;;;;;486:29;;;;;;;;;;;;;;;;;;459:24;;;;;;;;;;:56;;;;;;;;:24;;:56;;;;;;;;;;;;:::i;:::-;;;;;531:40;551:13;;565:5;531:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;531:40:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;369:212;:::o;239:42::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;239:42:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;27:563::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;27:563:0;;;-1:-1:-1;27:563:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract Hospital {\r\n    uint public hospitalCount = 0;\r\n\r\n    struct Hospital {\r\n        uint id;\r\n        string name;\r\n    }\r\n    event hospital_node_added(\r\n        uint id,\r\n        string name\r\n    );\r\n    mapping(uint => Hospital) public hospitals;\r\n\r\n    constructor() public {\r\n        createHospital(\"Demo Hospital\");\r\n    }\r\n\r\n    function createHospital(string memory _name) public {\r\n        hospitalCount ++;\r\n        hospitals[hospitalCount] = Hospital(hospitalCount,_name);\r\n        emit hospital_node_added(hospitalCount,_name);\r\n\r\n    }\r\n    \r\n}",
+  "sourcePath": "C:\\Users\\vanda\\mp\\Blockchain-for-Healthcare-Monitoring\\contracts\\Hospital.sol",
   "ast": {
-    "absolutePath": "/home/winstone/DRIVES/Projects/MP2/Blockchain-for-Healthcare-Monitoring/contracts/Hospital.sol",
+    "absolutePath": "/C/Users/vanda/mp/Blockchain-for-Healthcare-Monitoring/contracts/Hospital.sol",
     "exportedSymbols": {
       "Hospital": [
-        61
+        51
       ]
     },
-    "id": 62,
+    "id": 52,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 22,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -88,7 +101,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:23:0"
       },
       {
         "baseContracts": [],
@@ -96,20 +109,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 61,
+        "id": 51,
         "linearizedBaseContracts": [
-          61
+          51
         ],
         "name": "Hospital",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 25,
+            "id": 4,
             "name": "hospitalCount",
             "nodeType": "VariableDeclaration",
-            "scope": 61,
-            "src": "49:29:1",
+            "scope": 51,
+            "src": "52:29:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -117,10 +130,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 23,
+              "id": 2,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "49:4:1",
+              "src": "52:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -129,14 +142,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 24,
+              "id": 3,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "77:1:1",
+              "src": "80:1:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_0_by_1",
@@ -148,15 +161,15 @@
           },
           {
             "canonicalName": "Hospital.Hospital",
-            "id": 30,
+            "id": 9,
             "members": [
               {
                 "constant": false,
-                "id": 27,
+                "id": 6,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 30,
-                "src": "111:7:1",
+                "scope": 9,
+                "src": "117:7:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -164,10 +177,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 26,
+                  "id": 5,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "111:4:1",
+                  "src": "117:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -178,11 +191,11 @@
               },
               {
                 "constant": false,
-                "id": 29,
+                "id": 8,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 30,
-                "src": "128:11:1",
+                "scope": 9,
+                "src": "135:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -190,10 +203,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 28,
+                  "id": 7,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "128:6:1",
+                  "src": "135:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -205,50 +218,119 @@
             ],
             "name": "Hospital",
             "nodeType": "StructDefinition",
-            "scope": 61,
-            "src": "85:61:1",
+            "scope": 51,
+            "src": "90:64:0",
             "visibility": "public"
           },
           {
+            "anonymous": false,
+            "documentation": null,
+            "id": 15,
+            "name": "hospital_node_added",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15,
+                  "src": "196:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "196:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13,
+                  "indexed": false,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15,
+                  "src": "214:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:47:0"
+            },
+            "src": "160:73:0"
+          },
+          {
             "constant": false,
-            "id": 34,
+            "id": 19,
             "name": "hospitals",
             "nodeType": "VariableDeclaration",
-            "scope": 61,
-            "src": "152:42:1",
+            "scope": 51,
+            "src": "239:42:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$30_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$9_storage_$",
               "typeString": "mapping(uint256 => struct Hospital.Hospital)"
             },
             "typeName": {
-              "id": 33,
+              "id": 18,
               "keyType": {
-                "id": 31,
+                "id": 16,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "160:4:1",
+                "src": "247:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "152:25:1",
+              "src": "239:25:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$30_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$9_storage_$",
                 "typeString": "mapping(uint256 => struct Hospital.Hospital)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 32,
+                "id": 17,
                 "name": "Hospital",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 30,
-                "src": "168:8:1",
+                "referencedDeclaration": 9,
+                "src": "255:8:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Hospital_$30_storage_ptr",
+                  "typeIdentifier": "t_struct$_Hospital_$9_storage_ptr",
                   "typeString": "struct Hospital.Hospital"
                 }
               }
@@ -258,9 +340,9 @@
           },
           {
             "body": {
-              "id": 41,
+              "id": 26,
               "nodeType": "Block",
-              "src": "222:48:1",
+              "src": "311:50:0",
               "statements": [
                 {
                   "expression": {
@@ -269,14 +351,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "44656d6f20486f73706974616c",
-                        "id": 38,
+                        "id": 23,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "247:15:1",
+                        "src": "337:15:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_9027a439ba7478103be828b18db51a85984c208d04a06acab04efbae83bdae14",
@@ -292,18 +374,18 @@
                           "typeString": "literal_string \"Demo Hospital\""
                         }
                       ],
-                      "id": 37,
+                      "id": 22,
                       "name": "createHospital",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
-                      "src": "232:14:1",
+                      "referencedDeclaration": 50,
+                      "src": "322:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory)"
                       }
                     },
-                    "id": 39,
+                    "id": 24,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -311,53 +393,53 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "232:31:1",
+                    "src": "322:31:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 40,
+                  "id": 25,
                   "nodeType": "ExpressionStatement",
-                  "src": "232:31:1"
+                  "src": "322:31:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 42,
+            "id": 27,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 35,
+              "id": 20,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "212:2:1"
+              "src": "301:2:0"
             },
             "returnParameters": {
-              "id": 36,
+              "id": 21,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "222:0:1"
+              "src": "311:0:0"
             },
-            "scope": 61,
-            "src": "201:69:1",
+            "scope": 51,
+            "src": "290:71:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 59,
+              "id": 49,
               "nodeType": "Block",
-              "src": "328:99:1",
+              "src": "421:160:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 48,
+                    "id": 33,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -365,15 +447,15 @@
                     "nodeType": "UnaryOperation",
                     "operator": "++",
                     "prefix": false,
-                    "src": "338:16:1",
+                    "src": "432:16:0",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 47,
+                      "id": 32,
                       "name": "hospitalCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 25,
-                      "src": "338:13:1",
+                      "referencedDeclaration": 4,
+                      "src": "432:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -384,14 +466,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 49,
+                  "id": 34,
                   "nodeType": "ExpressionStatement",
-                  "src": "338:16:1"
+                  "src": "432:16:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 57,
+                    "id": 42,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -400,26 +482,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 50,
+                        "id": 35,
                         "name": "hospitals",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 34,
-                        "src": "364:9:1",
+                        "referencedDeclaration": 19,
+                        "src": "459:9:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$30_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$9_storage_$",
                           "typeString": "mapping(uint256 => struct Hospital.Hospital storage ref)"
                         }
                       },
-                      "id": 52,
+                      "id": 37,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 51,
+                        "id": 36,
                         "name": "hospitalCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 25,
-                        "src": "374:13:1",
+                        "referencedDeclaration": 4,
+                        "src": "469:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -430,9 +512,9 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "364:24:1",
+                      "src": "459:24:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Hospital_$30_storage",
+                        "typeIdentifier": "t_struct$_Hospital_$9_storage",
                         "typeString": "struct Hospital.Hospital storage ref"
                       }
                     },
@@ -443,12 +525,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 54,
+                          "id": 39,
                           "name": "hospitalCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 25,
-                          "src": "400:13:1",
+                          "referencedDeclaration": 4,
+                          "src": "495:13:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -456,12 +538,12 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 55,
+                          "id": 40,
                           "name": "_name",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 44,
-                          "src": "414:5:1",
+                          "referencedDeclaration": 29,
+                          "src": "509:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -479,18 +561,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 53,
+                        "id": 38,
                         "name": "Hospital",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 30,
-                        "src": "391:8:1",
+                        "referencedDeclaration": 9,
+                        "src": "486:8:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Hospital_$30_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Hospital_$9_storage_ptr_$",
                           "typeString": "type(struct Hospital.Hospital storage pointer)"
                         }
                       },
-                      "id": 56,
+                      "id": 41,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -498,42 +580,113 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "391:29:1",
+                      "src": "486:29:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Hospital_$30_memory",
+                        "typeIdentifier": "t_struct$_Hospital_$9_memory",
                         "typeString": "struct Hospital.Hospital memory"
                       }
                     },
-                    "src": "364:56:1",
+                    "src": "459:56:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Hospital_$30_storage",
+                      "typeIdentifier": "t_struct$_Hospital_$9_storage",
                       "typeString": "struct Hospital.Hospital storage ref"
                     }
                   },
-                  "id": 58,
+                  "id": 43,
                   "nodeType": "ExpressionStatement",
-                  "src": "364:56:1"
+                  "src": "459:56:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "hospitalCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "551:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29,
+                        "src": "565:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 44,
+                      "name": "hospital_node_added",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15,
+                      "src": "531:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,string memory)"
+                      }
+                    },
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "531:40:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 48,
+                  "nodeType": "EmitStatement",
+                  "src": "526:45:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 60,
+            "id": 50,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createHospital",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 45,
+              "id": 30,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 44,
+                  "id": 29,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 60,
-                  "src": "300:19:1",
+                  "scope": 50,
+                  "src": "393:19:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -541,10 +694,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 43,
+                    "id": 28,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "300:6:1",
+                    "src": "393:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -554,39 +707,39 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "299:21:1"
+              "src": "392:21:0"
             },
             "returnParameters": {
-              "id": 46,
+              "id": 31,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "328:0:1"
+              "src": "421:0:0"
             },
-            "scope": 61,
-            "src": "276:151:1",
+            "scope": 51,
+            "src": "369:212:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 62,
-        "src": "25:409:1"
+        "scope": 52,
+        "src": "27:563:0"
       }
     ],
-    "src": "0:434:1"
+    "src": "0:590:0"
   },
   "legacyAST": {
-    "absolutePath": "/home/winstone/DRIVES/Projects/MP2/Blockchain-for-Healthcare-Monitoring/contracts/Hospital.sol",
+    "absolutePath": "/C/Users/vanda/mp/Blockchain-for-Healthcare-Monitoring/contracts/Hospital.sol",
     "exportedSymbols": {
       "Hospital": [
-        61
+        51
       ]
     },
-    "id": 62,
+    "id": 52,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 22,
+        "id": 1,
         "literals": [
           "solidity",
           "^",
@@ -594,7 +747,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:23:0"
       },
       {
         "baseContracts": [],
@@ -602,20 +755,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 61,
+        "id": 51,
         "linearizedBaseContracts": [
-          61
+          51
         ],
         "name": "Hospital",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 25,
+            "id": 4,
             "name": "hospitalCount",
             "nodeType": "VariableDeclaration",
-            "scope": 61,
-            "src": "49:29:1",
+            "scope": 51,
+            "src": "52:29:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -623,10 +776,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 23,
+              "id": 2,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "49:4:1",
+              "src": "52:4:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -635,14 +788,14 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 24,
+              "id": 3,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "77:1:1",
+              "src": "80:1:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_0_by_1",
@@ -654,15 +807,15 @@
           },
           {
             "canonicalName": "Hospital.Hospital",
-            "id": 30,
+            "id": 9,
             "members": [
               {
                 "constant": false,
-                "id": 27,
+                "id": 6,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 30,
-                "src": "111:7:1",
+                "scope": 9,
+                "src": "117:7:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -670,10 +823,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 26,
+                  "id": 5,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "111:4:1",
+                  "src": "117:4:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -684,11 +837,11 @@
               },
               {
                 "constant": false,
-                "id": 29,
+                "id": 8,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 30,
-                "src": "128:11:1",
+                "scope": 9,
+                "src": "135:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -696,10 +849,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 28,
+                  "id": 7,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "128:6:1",
+                  "src": "135:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -711,50 +864,119 @@
             ],
             "name": "Hospital",
             "nodeType": "StructDefinition",
-            "scope": 61,
-            "src": "85:61:1",
+            "scope": 51,
+            "src": "90:64:0",
             "visibility": "public"
           },
           {
+            "anonymous": false,
+            "documentation": null,
+            "id": 15,
+            "name": "hospital_node_added",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11,
+                  "indexed": false,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15,
+                  "src": "196:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "196:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13,
+                  "indexed": false,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15,
+                  "src": "214:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 12,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:47:0"
+            },
+            "src": "160:73:0"
+          },
+          {
             "constant": false,
-            "id": 34,
+            "id": 19,
             "name": "hospitals",
             "nodeType": "VariableDeclaration",
-            "scope": 61,
-            "src": "152:42:1",
+            "scope": 51,
+            "src": "239:42:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$30_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$9_storage_$",
               "typeString": "mapping(uint256 => struct Hospital.Hospital)"
             },
             "typeName": {
-              "id": 33,
+              "id": 18,
               "keyType": {
-                "id": 31,
+                "id": 16,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "160:4:1",
+                "src": "247:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "152:25:1",
+              "src": "239:25:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$30_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$9_storage_$",
                 "typeString": "mapping(uint256 => struct Hospital.Hospital)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 32,
+                "id": 17,
                 "name": "Hospital",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 30,
-                "src": "168:8:1",
+                "referencedDeclaration": 9,
+                "src": "255:8:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Hospital_$30_storage_ptr",
+                  "typeIdentifier": "t_struct$_Hospital_$9_storage_ptr",
                   "typeString": "struct Hospital.Hospital"
                 }
               }
@@ -764,9 +986,9 @@
           },
           {
             "body": {
-              "id": 41,
+              "id": 26,
               "nodeType": "Block",
-              "src": "222:48:1",
+              "src": "311:50:0",
               "statements": [
                 {
                   "expression": {
@@ -775,14 +997,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "44656d6f20486f73706974616c",
-                        "id": 38,
+                        "id": 23,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "247:15:1",
+                        "src": "337:15:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_9027a439ba7478103be828b18db51a85984c208d04a06acab04efbae83bdae14",
@@ -798,18 +1020,18 @@
                           "typeString": "literal_string \"Demo Hospital\""
                         }
                       ],
-                      "id": 37,
+                      "id": 22,
                       "name": "createHospital",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
-                      "src": "232:14:1",
+                      "referencedDeclaration": 50,
+                      "src": "322:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory)"
                       }
                     },
-                    "id": 39,
+                    "id": 24,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -817,53 +1039,53 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "232:31:1",
+                    "src": "322:31:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 40,
+                  "id": 25,
                   "nodeType": "ExpressionStatement",
-                  "src": "232:31:1"
+                  "src": "322:31:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 42,
+            "id": 27,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 35,
+              "id": 20,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "212:2:1"
+              "src": "301:2:0"
             },
             "returnParameters": {
-              "id": 36,
+              "id": 21,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "222:0:1"
+              "src": "311:0:0"
             },
-            "scope": 61,
-            "src": "201:69:1",
+            "scope": 51,
+            "src": "290:71:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 59,
+              "id": 49,
               "nodeType": "Block",
-              "src": "328:99:1",
+              "src": "421:160:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 48,
+                    "id": 33,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -871,15 +1093,15 @@
                     "nodeType": "UnaryOperation",
                     "operator": "++",
                     "prefix": false,
-                    "src": "338:16:1",
+                    "src": "432:16:0",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 47,
+                      "id": 32,
                       "name": "hospitalCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 25,
-                      "src": "338:13:1",
+                      "referencedDeclaration": 4,
+                      "src": "432:13:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -890,14 +1112,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 49,
+                  "id": 34,
                   "nodeType": "ExpressionStatement",
-                  "src": "338:16:1"
+                  "src": "432:16:0"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 57,
+                    "id": 42,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -906,26 +1128,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 50,
+                        "id": 35,
                         "name": "hospitals",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 34,
-                        "src": "364:9:1",
+                        "referencedDeclaration": 19,
+                        "src": "459:9:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$30_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Hospital_$9_storage_$",
                           "typeString": "mapping(uint256 => struct Hospital.Hospital storage ref)"
                         }
                       },
-                      "id": 52,
+                      "id": 37,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 51,
+                        "id": 36,
                         "name": "hospitalCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 25,
-                        "src": "374:13:1",
+                        "referencedDeclaration": 4,
+                        "src": "469:13:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -936,9 +1158,9 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "364:24:1",
+                      "src": "459:24:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Hospital_$30_storage",
+                        "typeIdentifier": "t_struct$_Hospital_$9_storage",
                         "typeString": "struct Hospital.Hospital storage ref"
                       }
                     },
@@ -949,12 +1171,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 54,
+                          "id": 39,
                           "name": "hospitalCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 25,
-                          "src": "400:13:1",
+                          "referencedDeclaration": 4,
+                          "src": "495:13:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -962,12 +1184,12 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 55,
+                          "id": 40,
                           "name": "_name",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 44,
-                          "src": "414:5:1",
+                          "referencedDeclaration": 29,
+                          "src": "509:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -985,18 +1207,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 53,
+                        "id": 38,
                         "name": "Hospital",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 30,
-                        "src": "391:8:1",
+                        "referencedDeclaration": 9,
+                        "src": "486:8:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Hospital_$30_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Hospital_$9_storage_ptr_$",
                           "typeString": "type(struct Hospital.Hospital storage pointer)"
                         }
                       },
-                      "id": 56,
+                      "id": 41,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1004,42 +1226,113 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "391:29:1",
+                      "src": "486:29:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Hospital_$30_memory",
+                        "typeIdentifier": "t_struct$_Hospital_$9_memory",
                         "typeString": "struct Hospital.Hospital memory"
                       }
                     },
-                    "src": "364:56:1",
+                    "src": "459:56:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Hospital_$30_storage",
+                      "typeIdentifier": "t_struct$_Hospital_$9_storage",
                       "typeString": "struct Hospital.Hospital storage ref"
                     }
                   },
-                  "id": 58,
+                  "id": 43,
                   "nodeType": "ExpressionStatement",
-                  "src": "364:56:1"
+                  "src": "459:56:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 45,
+                        "name": "hospitalCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "551:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29,
+                        "src": "565:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 44,
+                      "name": "hospital_node_added",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15,
+                      "src": "531:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,string memory)"
+                      }
+                    },
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "531:40:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 48,
+                  "nodeType": "EmitStatement",
+                  "src": "526:45:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 60,
+            "id": 50,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createHospital",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 45,
+              "id": 30,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 44,
+                  "id": 29,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 60,
-                  "src": "300:19:1",
+                  "scope": 50,
+                  "src": "393:19:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1047,10 +1340,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 43,
+                    "id": 28,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "300:6:1",
+                    "src": "393:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1060,26 +1353,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "299:21:1"
+              "src": "392:21:0"
             },
             "returnParameters": {
-              "id": 46,
+              "id": 31,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "328:0:1"
+              "src": "421:0:0"
             },
-            "scope": 61,
-            "src": "276:151:1",
+            "scope": 51,
+            "src": "369:212:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 62,
-        "src": "25:409:1"
+        "scope": 52,
+        "src": "27:563:0"
       }
     ],
-    "src": "0:434:1"
+    "src": "0:590:0"
   },
   "compiler": {
     "name": "solc",
@@ -1094,7 +1387,7 @@
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2020-11-09T16:51:03.386Z",
+  "updatedAt": "2020-11-24T15:42:25.837Z",
   "devdoc": {
     "methods": {}
   },
