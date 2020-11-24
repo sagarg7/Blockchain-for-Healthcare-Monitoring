@@ -7,7 +7,10 @@ contract Hospital {
         uint id;
         string name;
     }
-
+    event hospital_node_added(
+        uint id,
+        string name
+    );
     mapping(uint => Hospital) public hospitals;
 
     constructor() public {
@@ -17,6 +20,8 @@ contract Hospital {
     function createHospital(string memory _name) public {
         hospitalCount ++;
         hospitals[hospitalCount] = Hospital(hospitalCount,_name);
+        emit hospital_node_added(hospitalCount,_name);
+
     }
     
 }
